@@ -1,0 +1,17 @@
+
+FTP account:                       B22011
+
+Level:                             A
+cycle:                             403604
+Synthesis area:                    8875.704534
+
+--- RTL category---
+HDL simulator :                    xmverilog
+RTL filename :                     JAM.v sort.v
+
+--- Pre-layout gate-level ---
+gate-levelfilename:                JAM_syn.v
+gate-level sdf filename:           JAM_syn.sdf
+
+-----(annotation)--------------------------------------------------------
+ (optional, write down anything that you want grader know)

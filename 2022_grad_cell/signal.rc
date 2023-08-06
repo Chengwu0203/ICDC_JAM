@@ -1,0 +1,93 @@
+Magic 271485
+Revision Verdi_S-2021.09
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 23 1920 1017 208 167
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / -i 0 "" "/home/chengwu/CIC2022/2022_grad_cell/JAM.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 29339.184888
+cursor 31500.000000
+marker 0.000000
+
+; visible top row signal index
+top 0
+; marker line index
+markerPos 17
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+aliasmapname JAM.cs
+nalias SORT_2		3'b010		NULL
+nalias JUDGE		3'b110		NULL
+nalias SORT_3		3'b011		NULL
+nalias DONE		3'b111		NULL
+nalias IDLE		3'b000		NULL
+nalias SORT_4		3'b100		NULL
+nalias SORT_1		3'b001		NULL
+nalias CAL_COST		3'b101		NULL
+
+addGroup "G1"
+activeDirFile "" "/home/chengwu/CIC2022/2022_grad_cell/JAM.fsdb"
+addSignal -h 15 /testfixture/u_JAM/CLK
+addSignal -h 15 -holdScope RST
+addGroup "G2"
+addGroup "G3"
+addGroup "G4"
+addGroup "G5"
+addGroup "G6"
+addGroup "G7"
+addSignal -h 15 /testfixture/u_JAM/W[2:0]
+addSignal -h 15 -holdScope J[2:0]
+addSignal -h 15 -holdScope Cost[6:0]
+addGroup "G8"
+addSignal -h 15 /testfixture/u_JAM/Valid
+addSignal -h 15 -holdScope MinCost[9:0]
+addSignal -h 15 -holdScope MatchCount[3:0]
+addGroup "G9"
+addGroup "G10"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/chengwu/CIC2022/2022_grad_cell/JAM.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/testfixture"
+
+SCOPE_LIST_BEGIN
+"/testfixture"
+"/testfixture/READ_PATTERN"
+"/testfixture/u_JAM"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

@@ -1,0 +1,100 @@
+Magic 271485
+Revision Verdi_S-2021.09
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 1920 23 1920 1017 208 197
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / -i 0 "" "/home/chengwu/CIC2022/2022_grad_cell/JAM.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 138513140.428857 138562204.236475
+cursor 138520500.000000
+marker 0.000000
+
+; visible top row signal index
+top 0
+; marker line index
+markerPos 15
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+aliasmapname sort.cs
+nalias SORT_2		3'b010		NULL
+nalias SORT_3		3'b011		NULL
+nalias IDLE		3'b000		NULL
+nalias SORT_1		3'b001		NULL
+nalias SORT_4		3'b100		NULL
+nalias SEQ_OUT		3'b101		NULL
+
+aliasmapname JAM.cs
+nalias JUDGE		3'b010		NULL
+nalias WAIT		3'b011		NULL
+nalias IDLE		3'b000		NULL
+nalias CAL_COST		3'b001		NULL
+nalias DONE		3'b100		NULL
+
+addGroup "G1"
+activeDirFile "" "/home/chengwu/CIC2022/2022_grad_cell/JAM.fsdb"
+addSignal -h 15 /testfixture/u_JAM/CLK
+addSignal -h 15 -holdScope RST
+aliasname JAM.cs
+addSignal -h 15 -UNSIGNED -HEX -holdScope cs[2:0]
+addSignal -h 15 -holdScope sort_busy
+addGroup "G2"
+addSignal -h 15 /testfixture/u_JAM/SORT0/req
+addGroup "G3"
+addSignal -h 15 /testfixture/u_JAM/cnt[3:0]
+addSignal -h 15 -holdScope sum[9:0]
+addGroup "G4"
+addSignal -h 15 /testfixture/u_JAM/busy
+addSignal -h 15 -UNSIGNED -UDEC -holdScope MatchCount[3:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope MinCost[9:0]
+addGroup "G5"
+addSignal -h 15 /testfixture/u_JAM/SORT0/num[3:0]
+addGroup "G6"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/chengwu/CIC2022/2022_grad_cell/JAM.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/testfixture"
+"/testfixture/u_JAM"
+
+SCOPE_LIST_BEGIN
+"/testfixture"
+"/testfixture/u_JAM"
+"/testfixture/u_JAM/SORT0"
+"/testfixture/READ_PATTERN"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+
